@@ -47,7 +47,8 @@ import { AuthService } from './shared-services/auth.service';
     AngularFireDatabaseModule,
     NgbModule,
   ],
-  providers: [AuthService],
+  providers: [AuthService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
