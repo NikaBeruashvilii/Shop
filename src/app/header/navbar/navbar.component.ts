@@ -12,14 +12,16 @@ import { AuthService } from '../../shared-services/auth.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent  {
+  isHidden:boolean = false;
 
-  constructor(private afAuth:AuthService) { 
+  constructor(private auth:AuthService) { 
   }
 
   ngOnInit(): void {
   }
 
   logOut() {
-    this.afAuth.logout();
+    this.auth.logout();
+    this.isHidden = true;
   }
 }
