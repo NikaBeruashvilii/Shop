@@ -12,7 +12,7 @@ import { AuthService } from '../../shared-services/auth.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent  {
-  isHidden:boolean = false;
+  isHidden:boolean = true;
 
   constructor(private auth:AuthService) { 
   }
@@ -22,6 +22,6 @@ export class NavbarComponent  {
 
   logOut() {
     this.auth.logout();
-    this.isHidden = true;
+    this.isHidden = false;
   }
 }
